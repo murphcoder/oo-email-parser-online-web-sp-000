@@ -8,7 +8,7 @@ class EmailParser
   attr_accessor :email_array
   
   def initialize (emails)
-    @email_array = emails.split(/(, | |,)/)
+    @email_array = emails.split(/(| |,)/)
     @email_array.reject! {|email| email !~ /\w+@\w+.\w+/}
   end
   
