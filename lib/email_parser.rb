@@ -9,6 +9,7 @@ class EmailParser
   
   def initialize (emails)
     @email_array = emails.split(/(,| )/)
+    @email_array.reject! {|email| 
   end
   
   def parse
