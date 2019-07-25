@@ -10,10 +10,11 @@ class EmailParser
   def initialize (emails)
     @email_array = emails.split(/( |,)/)
     @email_array.reject! {|email| email !~ /\w+@\w+.\w+/}
+    @email_array.uniq!
   end
   
   def parse
-    @email_array.uniq
+    @email_array
   end
   
 end
